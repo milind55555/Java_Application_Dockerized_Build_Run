@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+      tools {
+        jdk 'JDK11'
+    }
+
     environment {
         IMAGE_NAME = "hello-java-app"
         IMAGE_TAG = "${env.BUILD_NUMBER}"
