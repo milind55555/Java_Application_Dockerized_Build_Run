@@ -1,5 +1,3 @@
-FROM openjdk:17-jdk-alpine
-WORKDIR /app
-COPY . /app
-RUN javac app.java
+FROM openjdk:8-jdk-alpine
+COPY app.class /app.class
 CMD ["java", "app"]
